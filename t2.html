@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional CSS for background images */
+        body {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to ODTS</h1>
+            <p>Hyderabad's most loved Orphanage Donation and Adoption tracking web service</p>
+        </div>
+        <div class="social-login">
+            <p>Quickly login using</p>
+            <button id="facebook-login">Facebook</button>
+            <button id="google-login">Google</button>
+        </div>
+        <div class="or">
+            <hr>
+            <p>or</p>
+        </div>
+        <form id="login-form" action="#" method="post">
+            <div class="form-group">
+                <label for="username">Mobile number / Email ID</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password/OTP</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" id="login-button">Login</button>
+        </form>
+        <div class="sign-up">
+            <p>New to ODTS? <a href="#">Sign up now, it's quick & free</a></p>
+        </div>
+    </div>
+    <script>
+        // Array of background image URLs
+        var backgroundImageUrls = [
+            '1.png', // Replace with actual image URLs
+            '2.png',
+            '3.png',
+            '4.png',
+            // Add more image URLs as needed
+        ];
+
+        // Function to randomly select a background image
+        function setRandomBackgroundImage() {
+            var randomIndex = Math.floor(Math.random() * backgroundImageUrls.length);
+            var randomImageUrl = backgroundImageUrls[randomIndex];
+            document.body.style.backgroundImage = 'url(' + randomImageUrl + ')';
+        }
+
+        // Set random background image on page load
+        window.onload = function() {
+            setRandomBackgroundImage();
+        };
+    </script>
+<!--
+    <script>
+        document.getElementById('login-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('login-form').submit(); // Submit the form
+        });
+    </script> -->
+</body>
+</html>
